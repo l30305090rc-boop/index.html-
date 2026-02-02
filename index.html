@@ -1,1 +1,140 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWings - Vuelos con 40% de descuento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-plane"></i>
+                <span>SkyWings</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Buscar Vuelos</a></li>
+                    <li><a href="#"><i class="fas fa-suitcase"></i> Mis Viajes</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> Ayuda</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-login">Iniciar Sesión</button>
+                <button class="btn btn-register">Registrarse</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container">
+            <div class="discount-badge">¡40% DE DESCUENTO EN TODOS LOS VUELOS!</div>
+            <h1>Vuela a tu destino soñado</h1>
+            <p>Encuentra las mejores ofertas en vuelos nacionales e internacionales. Todos nuestros precios ya incluyen un 40% de descuento aplicado.</p>
+        </div>
+    </section>
+
+    <!-- Search Form -->
+    <div class="container">
+        <div class="search-container">
+            <h2>Buscar Vuelos</h2>
+            <form class="search-form" id="searchForm">
+                <div class="form-group">
+                    <label for="origin">Origen</label>
+                    <input type="text" id="origin" class="form-control" placeholder="Ciudad o aeropuerto" value="Bogotá (BOG)">
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destino</label>
+                    <input type="text" id="destination" class="form-control" placeholder="Ciudad o aeropuerto" value="Medellín (MDE)">
+                </div>
+                <div class="form-group">
+                    <label for="departure">Fecha de Ida</label>
+                    <input type="date" id="departure" class="form-control" value="2023-10-15">
+                </div>
+                <div class="form-group">
+                    <label for="return">Fecha de Regreso</label>
+                    <input type="date" id="return" class="form-control" value="2023-10-20">
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Pasajeros</label>
+                    <select id="passengers" class="form-control">
+                        <option>1 pasajero</option>
+                        <option selected>2 pasajeros</option>
+                        <option>3 pasajeros</option>
+                        <option>4 pasajeros</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-search"><i class="fas fa-search"></i> Buscar Vuelos</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Flights List -->
+    <div class="container flights-container">
+        <div class="section-title">
+            <h2>Vuelos Disponibles</h2>
+            <div class="real-time-indicator">
+                <div class="pulse"></div>
+                <span>Actualizando en tiempo real</span>
+            </div>
+        </div>
+        
+        <div class="flights-list" id="flightsList">
+            <!-- Los vuelos se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SkyWings</h3>
+                    <p>Tu compañía de confianza para viajar por Colombia y el mundo. Ofrecemos las mejores tarifas con descuentos exclusivos.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Destinos Populares</h3>
+                    <ul>
+                        <li><a href="#">Bogotá</a></li>
+                        <li><a href="#">Medellín</a></li>
+                        <li><a href="#">Cartagena</a></li>
+                        <li><a href="#">Cali</a></li>
+                        <li><a href="#">Miami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#">Acerca de nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="#">Check-in en línea</a></li>
+                        <li><a href="#">Estado del vuelo</a></li>
+                        <li><a href="#">Cambios y cancelaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SkyWings. Todos los derechos reservados. Este sitio es una demostración y no está afiliado a Avianca.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
